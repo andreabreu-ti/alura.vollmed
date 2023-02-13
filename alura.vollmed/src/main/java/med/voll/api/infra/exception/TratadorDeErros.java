@@ -1,4 +1,4 @@
-package med.voll.api.infra;
+package med.voll.api.infra.exception;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -10,7 +10,7 @@ import jakarta.persistence.EntityNotFoundException;
 import lombok.experimental.var;
 
 @RestControllerAdvice
-public class TratdorDeErros {
+public class TratadorDeErros {
 
 	@ExceptionHandler(EntityNotFoundException.class)
 	public ResponseEntity tratarErro404() {

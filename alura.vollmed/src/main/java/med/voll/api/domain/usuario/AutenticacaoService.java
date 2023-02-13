@@ -13,7 +13,8 @@ public class AutenticacaoService implements UserDetailsService {
 	@Autowired
 	private UsuarioRepository repository;
 
-	//Metodo que será chamado automaticamente toda vez que fizer login, o Spring irá buscar essa classe chamado o metodo loadUserByUsername
+	//Metodo que será chamado automaticamente toda vez que fizer login, 
+	//o Spring irá buscar essa classe chamando o metodo loadUserByUsername
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		return repository.findByLogin(username);
