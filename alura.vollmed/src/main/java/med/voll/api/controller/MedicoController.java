@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import ch.qos.logback.core.joran.conditional.IfAction;
 import jakarta.validation.Valid;
 import med.voll.api.domain.medico.DadosAtualizacaoMedico;
 import med.voll.api.domain.medico.DadosCadastroMedico;
