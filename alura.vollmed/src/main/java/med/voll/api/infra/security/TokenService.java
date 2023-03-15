@@ -35,6 +35,7 @@ public class TokenService {
 	public String getSubject(String tokenJWT) {
 
 		try {
+			System.out.println("ENTROU NO TRY DO TOKENSERVICE");
 			var algoritimo = Algorithm.HMAC256(secret);
 			return JWT.require(algoritimo).withIssuer("API Voll.med").build().verify(tokenJWT).getSubject();
 
