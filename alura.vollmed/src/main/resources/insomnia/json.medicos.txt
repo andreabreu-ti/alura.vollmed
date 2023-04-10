@@ -1,0 +1,18 @@
+http://localhost:8080/medicos
+
+{
+"nome": "Fulano de Tal",
+"email": "fulano@voll.med",
+"crm": "123456",
+"telefone": "199545669",
+"especialidade": "CARDIOLOGIA",
+"endereco": {
+    "logradouro": "Passagem sANTOS",
+    "bairro": "Maguari",
+    "cep": "66615999",
+    "cidade": "Belém",
+    "uf": "PA",
+	  "numero" : "114",
+	  "complemento" : "Rua 2"
+    }
+}
