@@ -1,0 +1,15 @@
+{
+	"nome" : "Joao Carlos",
+	"email" : "joao.carlos@insominia.com",
+	"telefone" : "199545669",
+	"cpf" : "12345678990",
+	"endereco": {
+    "logradouro": "Passagem Mia Kalifa",
+    "bairro": "Tenoné",
+    "cep": "66615120",
+    "cidade": "Belém",
+    "uf": "PA",
+	  "numero" : "114",
+	  "complemento" : "Rua 2 "
+    }
+}
