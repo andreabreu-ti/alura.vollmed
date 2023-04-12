@@ -56,7 +56,6 @@ public class MedicoController {
 //		repository.deleteById(id);
 		var medico = repository.getReferenceById(id);
 		medico.excluir();
-		
 	}
 	
 }
