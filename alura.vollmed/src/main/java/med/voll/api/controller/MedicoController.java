@@ -18,12 +18,12 @@ import org.springframework.web.util.UriComponentsBuilder;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import lombok.experimental.var;
-import med.voll.api.medico.DadosAtualizacaoMedico;
-import med.voll.api.medico.DadosCadastroMedico;
-import med.voll.api.medico.DadosDetalhamentoMedico;
-import med.voll.api.medico.DadosListagemMedico;
-import med.voll.api.medico.Medico;
-import med.voll.api.medico.MedicoRepository;
+import med.voll.api.domain.medico.DadosAtualizacaoMedico;
+import med.voll.api.domain.medico.DadosCadastroMedico;
+import med.voll.api.domain.medico.DadosDetalhamentoMedico;
+import med.voll.api.domain.medico.DadosListagemMedico;
+import med.voll.api.domain.medico.Medico;
+import med.voll.api.domain.medico.MedicoRepository;
 
 @RestController
 @RequestMapping("/medicos")
@@ -36,17 +36,17 @@ public class MedicoController {
 	@Transactional
 	public ResponseEntity cadastrar(@RequestBody @Valid DadosCadastroMedico dados, UriComponentsBuilder uriBuilder) {
 
+		//Código de Protócolo http 201
 		var medico = new Medico(dados);
 		repository.save(medico);
-		
 		var uri = uriBuilder.path("/medicos/{id}").buildAndExpand(medico.getId()).toUri();
-		
 		return ResponseEntity.created(uri).body(new DadosDetalhamentoMedico(medico));
-		
 	}
 
 	@GetMapping
 	public ResponseEntity<Page<DadosListagemMedico>> listar(@PageableDefault(size = 5, sort = { "nome" }) Pageable paginacao) {
+		
+		//Código de Protócolo http 200
 		var page = repository.findAllByAtivoTrue(paginacao).map(DadosListagemMedico::new);
 		return ResponseEntity.ok(page);
 	}
@@ -55,20 +55,28 @@ public class MedicoController {
 	@Transactional
 	public ResponseEntity atualizar(@RequestBody @Valid DadosAtualizacaoMedico dados) {
 
+		//Código de Protócolo http 200
 		var medico = repository.getReferenceById(dados.id());
 		medico.atualizarInformacoes(dados);
-		
 		return ResponseEntity.ok(new DadosDetalhamentoMedico(medico));
-
 	}
 
 	@DeleteMapping("/{id}")
 	@Transactional
 	public ResponseEntity excluir(@PathVariable Long id) {
 
+		//Código de Protócolo http 204
 		var medico = repository.getReferenceById(id);
 		medico.excluir();
 		return ResponseEntity.noContent().build();
+	}
+	
+	@GetMapping("/{id}")
+	public ResponseEntity detalhar(@PathVariable Long id) {
+
+		//Código de Protócolo http 200
+		var medico = repository.getReferenceById(id);
+		return ResponseEntity.ok(new DadosDetalhamentoMedico(medico));
 	}
 
 }
