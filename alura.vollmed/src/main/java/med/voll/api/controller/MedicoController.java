@@ -46,6 +46,8 @@ public class MedicoController {
 	@GetMapping
 	public ResponseEntity<Page<DadosListagemMedico>> listar(@PageableDefault(size = 5, sort = { "nome" }) Pageable paginacao) {
 		
+		
+		
 		//Código de Protócolo http 200
 		var page = repository.findAllByAtivoTrue(paginacao).map(DadosListagemMedico::new);
 		return ResponseEntity.ok(page);
