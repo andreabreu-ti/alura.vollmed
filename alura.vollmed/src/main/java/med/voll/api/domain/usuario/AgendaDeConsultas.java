@@ -11,6 +11,7 @@ import med.voll.api.domain.ValidacaoException;
 import med.voll.api.domain.consulta.Consulta;
 import med.voll.api.domain.consulta.ConsultaRepository;
 import med.voll.api.domain.consulta.DadosAgendamentoConsulta;
+import med.voll.api.domain.consulta.DadosDetalhamentoConsulta;
 import med.voll.api.domain.consulta.validacoes.ValidadorAgendamentoDeConsultas;
 import med.voll.api.domain.medico.Medico;
 import med.voll.api.domain.medico.MedicoRepository;
@@ -31,7 +32,7 @@ public class AgendaDeConsultas {
 	@Autowired
 	private List<ValidadorAgendamentoDeConsultas> validadores;
 
-	public void agendar(DadosAgendamentoConsulta dados) {
+	public DadosDetalhamentoConsulta agendar(DadosAgendamentoConsulta dados) {
 
 		if (!pacienteRepository.existsById(dados.idPaciente())) {
 			throw new ValidacaoException("Id do paciente informado não existe!!");
@@ -45,8 +46,17 @@ public class AgendaDeConsultas {
 
 		var paciente = pacienteRepository.getReferenceById(dados.idPaciente());
 		var medico = escolherMedico(dados);
+		
+		if (medico == null) {
+			
+			throw new ValidacaoException("Não existe médico disponível nesta data!!");
+			
+		}
+		
 		var consulta = new Consulta(null, medico, paciente, dados.data());
 		consultaRepository.save(consulta);
+		
+		return new DadosDetalhamentoConsulta(consulta);
 
 	}
 
