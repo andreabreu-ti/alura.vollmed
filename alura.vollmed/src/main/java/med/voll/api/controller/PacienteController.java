@@ -18,7 +18,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
-import lombok.experimental.var;
 import med.voll.api.domain.paciente.DadosAtualizacaoPaciente;
 import med.voll.api.domain.paciente.DadosCadastroPaciente;
 import med.voll.api.domain.paciente.DadosDetalhamentoPaciente;
