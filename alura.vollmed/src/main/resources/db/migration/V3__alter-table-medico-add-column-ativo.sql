@@ -1,0 +1,2 @@
+ALTER TABLE medicos 
+ADD ativo int NOT NULL DEFAULT 1;
