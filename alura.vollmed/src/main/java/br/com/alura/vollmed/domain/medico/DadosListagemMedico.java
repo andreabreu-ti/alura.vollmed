@@ -1,6 +1,6 @@
-package br.com.alura.vollmed.medico;
+package br.com.alura.vollmed.domain.medico;
 
-import br.com.alura.vollmed.endereco.Medico;
+import br.com.alura.vollmed.domain.endereco.Medico;
 
 public record DadosListagemMedico(Long id, String nome, String email, String crm, Especialidade especialidade) {
 

@@ -1,8 +1,8 @@
-package br.com.alura.vollmed.endereco;
+package br.com.alura.vollmed.domain.endereco;
 
-import br.com.alura.vollmed.medico.DadosAtualizacaoMedico;
-import br.com.alura.vollmed.medico.DadosCadastroMedico;
-import br.com.alura.vollmed.medico.Especialidade;
+import br.com.alura.vollmed.domain.medico.DadosAtualizacaoMedico;
+import br.com.alura.vollmed.domain.medico.DadosCadastroMedico;
+import br.com.alura.vollmed.domain.medico.Especialidade;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

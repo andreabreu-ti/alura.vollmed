@@ -1,4 +1,4 @@
-package br.com.alura.vollmed.endereco;
+package br.com.alura.vollmed.domain.endereco;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
