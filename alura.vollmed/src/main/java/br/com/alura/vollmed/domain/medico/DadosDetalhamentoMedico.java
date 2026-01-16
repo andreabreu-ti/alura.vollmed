@@ -1,7 +1,6 @@
 package br.com.alura.vollmed.domain.medico;
 
 import br.com.alura.vollmed.domain.endereco.Endereco;
-import br.com.alura.vollmed.domain.endereco.Medico;
 
 public record DadosDetalhamentoMedico(Long id, String nome, String email, String crm, String telefone,
 		Especialidade especialidade, Endereco endereco) {

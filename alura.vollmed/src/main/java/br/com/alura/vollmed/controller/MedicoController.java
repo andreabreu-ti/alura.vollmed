@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import br.com.alura.vollmed.domain.endereco.Medico;
 import br.com.alura.vollmed.domain.medico.DadosAtualizacaoMedico;
 import br.com.alura.vollmed.domain.medico.DadosCadastroMedico;
 import br.com.alura.vollmed.domain.medico.DadosDetalhamentoMedico;
 import br.com.alura.vollmed.domain.medico.DadosListagemMedico;
+import br.com.alura.vollmed.domain.medico.Medico;
 import br.com.alura.vollmed.domain.medico.MedicoRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
