@@ -1,12 +1,14 @@
 package br.com.alura.vollmed.domain.consulta.validacoes;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import br.com.alura.vollmed.domain.ValidacaoException;
 import br.com.alura.vollmed.domain.consulta.ConsultaRepository;
 import br.com.alura.vollmed.domain.consulta.DadosAgendamentoConsulta;
 
-public class ValidadorPacienteSemOutraConsultaNoDia {
+@Component
+public class ValidadorPacienteSemOutraConsultaNoDia implements ValidadorAgendamentoDeConsulta {
 
 	@Autowired
 	private ConsultaRepository repository;

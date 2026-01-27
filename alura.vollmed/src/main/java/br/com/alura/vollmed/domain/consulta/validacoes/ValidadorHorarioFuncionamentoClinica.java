@@ -2,10 +2,13 @@ package br.com.alura.vollmed.domain.consulta.validacoes;
 
 import java.time.DayOfWeek;
 
+import org.springframework.stereotype.Component;
+
 import br.com.alura.vollmed.domain.ValidacaoException;
 import br.com.alura.vollmed.domain.consulta.DadosAgendamentoConsulta;
 
-public class ValidadorHorarioFuncionamentoClinica {
+@Component
+public class ValidadorHorarioFuncionamentoClinica implements ValidadorAgendamentoDeConsulta {
 
 	public void validar(DadosAgendamentoConsulta dados) {
 		

@@ -8,7 +8,7 @@ import br.com.alura.vollmed.domain.consulta.DadosAgendamentoConsulta;
 import br.com.alura.vollmed.domain.paciente.PacienteRepository;
 
 @Component
-public class ValidadorPacienteAtivo{
+public class ValidadorPacienteAtivo implements ValidadorAgendamentoDeConsulta {
 
 	@Autowired
     private PacienteRepository repository;
