@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.alura.vollmed.domain.consulta.AgendaDeConsultas;
 import br.com.alura.vollmed.domain.consulta.DadosAgendamentoConsulta;
-import br.com.alura.vollmed.domain.consulta.DadosDetalhamentoConsulta;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 
@@ -25,7 +24,9 @@ public class ConsultaController {
 	public ResponseEntity agendar(@RequestBody @Valid DadosAgendamentoConsulta dados) {
 		
 		System.out.println(dados);
-		agenda.agendar(dados);
-		return ResponseEntity.ok(new DadosDetalhamentoConsulta(null, null, null, null));
+		
+		var dto = agenda.agendar(dados);
+		
+		return ResponseEntity.ok(dto);
 	}
 }
