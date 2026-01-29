@@ -10,7 +10,6 @@ import br.com.alura.vollmed.domain.consulta.validacoes.ValidadorAgendamentoDeCon
 import br.com.alura.vollmed.domain.medico.Medico;
 import br.com.alura.vollmed.domain.medico.MedicoRepository;
 import br.com.alura.vollmed.domain.paciente.PacienteRepository;
-import lombok.experimental.var;
 
 @Service
 public class AgendaDeConsultas {
