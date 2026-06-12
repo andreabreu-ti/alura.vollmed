@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Endereco {
 
-	
 	private String logradouro;
 	private String bairro;
 	private String cep;
@@ -19,7 +18,11 @@ public class Endereco {
 	private String complemento;
 	private String cidade;
 	private String uf;
-	
+
+	//FORÇAR construtor padrão explícito
+	protected Endereco() {
+	}
+
 	public Endereco(DadosEndereco dados) {
 
 		this.logradouro = dados.logradouro();
