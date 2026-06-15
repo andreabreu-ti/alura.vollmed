@@ -30,7 +30,7 @@ public class Endereco {
 		this.uf = dados.uf();
 	}
 
-	public void atualizarInformacores(DadosEndereco dados) {
+	public void atualizarInformacoes(DadosEndereco dados) {
 		// TODO Auto-generated method stub
 		
 		if (dados.logradouro() != null) {

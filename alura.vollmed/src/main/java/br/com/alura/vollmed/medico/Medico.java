@@ -67,7 +67,7 @@ public class Medico {
 		
 		if (dados.endereco() != null) {
 			
-			this.endereco.atualizarInformacores(dados.endereco());
+			this.endereco.atualizarInformacoes(dados.endereco());
 		}
 		
 	}
