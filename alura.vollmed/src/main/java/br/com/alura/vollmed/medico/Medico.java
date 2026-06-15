@@ -28,6 +28,7 @@ public class Medico {
 
 	private String nome;
 	private String email;
+	private String telefone;
 	private String crm;
 
 	@Enumerated(EnumType.STRING)
@@ -41,6 +42,7 @@ public class Medico {
 		// Contrutor dados cadastro medico - Atribuição dos Atributos
 		this.nome = dados.nome();
 		this.email = dados.email();
+		this.telefone = dados.telefone();
 		this.crm = dados.crm();
 		this.endereco = new Endereco(dados.endereco());
 		this.especialidade = dados.especialidade();
