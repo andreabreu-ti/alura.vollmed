@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.alura.vollmed.medico.DadosCadastroMedico;
 import br.com.alura.vollmed.medico.Medico;
 import br.com.alura.vollmed.medico.MedicoRepository;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/medicos")
@@ -20,7 +21,7 @@ public class MedicoController {
 
 	@PostMapping
 	@Transactional
-	public void cadastrar(@RequestBody DadosCadastroMedico dados) {
+	public void cadastrar(@RequestBody @Valid DadosCadastroMedico dados) {
 
 		repository.save(new Medico(dados));
 	}

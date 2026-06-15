@@ -19,10 +19,6 @@ public class Endereco {
 	private String cidade;
 	private String uf;
 
-	//FORÇAR construtor padrão explícito
-	protected Endereco() {
-	}
-
 	public Endereco(DadosEndereco dados) {
 
 		this.logradouro = dados.logradouro();
