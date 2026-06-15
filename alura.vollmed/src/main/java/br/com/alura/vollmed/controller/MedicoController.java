@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import br.com.alura.vollmed.medico.DadosAtualizacaoMedico;
-import br.com.alura.vollmed.medico.DadosCadastroMedico;
-import br.com.alura.vollmed.medico.DadosDetalhamentoMedico;
-import br.com.alura.vollmed.medico.DadosListagemMedico;
-import br.com.alura.vollmed.medico.Medico;
-import br.com.alura.vollmed.medico.MedicoRepository;
+import br.com.alura.vollmed.domain.medico.DadosAtualizacaoMedico;
+import br.com.alura.vollmed.domain.medico.DadosCadastroMedico;
+import br.com.alura.vollmed.domain.medico.DadosDetalhamentoMedico;
+import br.com.alura.vollmed.domain.medico.DadosListagemMedico;
+import br.com.alura.vollmed.domain.medico.Medico;
+import br.com.alura.vollmed.domain.medico.MedicoRepository;
 import jakarta.validation.Valid;
 
 @RestController

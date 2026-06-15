@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.alura.vollmed.paciente.DadosAtualizacaoPaciente;
-import br.com.alura.vollmed.paciente.DadosCadastroPaciente;
-import br.com.alura.vollmed.paciente.DadosListagemPaciente;
-import br.com.alura.vollmed.paciente.Paciente;
-import br.com.alura.vollmed.paciente.PacienteRepository;
+import br.com.alura.vollmed.domain.paciente.DadosAtualizacaoPaciente;
+import br.com.alura.vollmed.domain.paciente.DadosCadastroPaciente;
+import br.com.alura.vollmed.domain.paciente.DadosListagemPaciente;
+import br.com.alura.vollmed.domain.paciente.Paciente;
+import br.com.alura.vollmed.domain.paciente.PacienteRepository;
 import jakarta.validation.Valid;
 
 @RestController

@@ -1,4 +1,4 @@
-package br.com.alura.vollmed.medico;
+package br.com.alura.vollmed.domain.medico;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

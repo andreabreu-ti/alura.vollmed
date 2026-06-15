@@ -1,4 +1,4 @@
-package br.com.alura.vollmed.medico;
+package br.com.alura.vollmed.domain.medico;
 
 public enum Especialidade {
 

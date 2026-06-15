@@ -1,4 +1,4 @@
-package br.com.alura.vollmed.medico;
+package br.com.alura.vollmed.domain.medico;
 
 public record DadosListagemMedico(Long id, String nome, String email, String crm, Especialidade especialidade) {
 	
