@@ -37,10 +37,13 @@ public class Medico {
 
 	@Embedded
 	private Endereco endereco;
+	
+	private Boolean ativo;
 
 	public Medico(DadosCadastroMedico dados) {
 
 		// Contrutor dados cadastro medico - Atribuição dos Atributos
+		this.ativo = true;
 		this.nome = dados.nome();
 		this.email = dados.email();
 		this.telefone = dados.telefone();
@@ -67,5 +70,10 @@ public class Medico {
 			this.endereco.atualizarInformacores(dados.endereco());
 		}
 		
+	}
+
+	public void excluir() {
+		// TODO Auto-generated method stub
+		this.ativo = false;
 	}
 }
